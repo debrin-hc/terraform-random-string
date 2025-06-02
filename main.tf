@@ -7,13 +7,42 @@ terraform {
   }
 }
 
-resource "random_string" "example" {
-  count   = 100
+resource "random_string" "example1" {
+  length  = var.length
+  special = false
+  upper   = false
+}
+
+resource "random_string" "example2" {
+  length  = var.length
+  special = false
+  upper   = false
+}
+
+resource "random_string" "example3" {
+  length  = var.length
+  special = false
+  upper   = false
+}
+
+resource "random_string" "example4" {
+  length  = var.length
+  special = false
+  upper   = false
+}
+
+resource "random_string" "example5" {
   length  = var.length
   special = false
   upper   = false
 }
 
 output "random_strings" {
-  value = [for s in random_string.example : s.result]
+  value = [
+    random_string.example1.result,
+    random_string.example2.result,
+    random_string.example3.result,
+    random_string.example4.result,
+    random_string.example5.result
+  ]
 }
