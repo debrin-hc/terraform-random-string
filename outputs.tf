@@ -1,3 +1,3 @@
 output "generated_string" {
-  value = random_string.example1.result
+  value = random_string.example3.result
 }
