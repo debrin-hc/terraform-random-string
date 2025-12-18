@@ -67,7 +67,7 @@ resource "random_string" "example10" {
   upper   = false
 }
 
-resource "random_string" "example10" {
+resource "random_string" "example11" {
   length  = var.length
   special = false
   upper   = true
@@ -84,6 +84,7 @@ output "random_strings" {
     random_string.example7.result,
     random_string.example8.result,
     random_string.example9.result,
-    random_string.example10.result
+    random_string.example10.result,
+    random_string.example11.result
   ]
 }
