@@ -67,6 +67,12 @@ resource "random_string" "example10" {
   upper   = false
 }
 
+resource "random_string" "example10" {
+  length  = var.length
+  special = false
+  upper   = true
+}
+
 output "random_strings" {
   value = [
     random_string.example1.result,
